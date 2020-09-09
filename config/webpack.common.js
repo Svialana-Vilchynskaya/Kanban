@@ -1,22 +1,24 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    path.resolve(__dirname, '../src/index.js'),
-  ],
+  entry: {
+    app: path.resolve(__dirname, '../src/index.js'),
+    styles: path.resolve(__dirname, '../src/styles/style.scss'),
+  },
+
   resolve: {
     modules: [
       path.resolve(__dirname, '../src'),
       path.resolve(__dirname, '../node_modules'),
     ],
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.json'],
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -27,15 +29,11 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        // test: /\.s[ac]ss$/i,
-        test: /\.css$/i,
+        test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
+          MiniCssExtractPlugin.loader,
           'css-loader',
-          // Compiles Sass to CSS
-          // 'sass-loader',
+          'sass-loader',
         ],
       },
       {
@@ -66,5 +64,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/index.html'),
     }),
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].[hash].css',
+      chunkFilename: 'styles/[id].css',
+    })
   ],
 };

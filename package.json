@@ -4,36 +4,34 @@
   "description": "Kanban JavaScript application",
   "main": "index.js",
   "dependencies": {
-    "react": "^16.13.1"
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.3",
+    "mini-css-extract-plugin": "^0.11.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-runtime": "^7.9.6",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "@hot-loader/react-dom": "^16.13.0",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "actions": "^1.3.0",
     "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.2.2",
     "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.0",
     "html-loader": "^1.3.0",
-    "html-webpack-plugin": "^4.4.1",
-    "react-dom": "^16.13.1",
-    "react-hot-loader": "^4.12.21",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.1.3"
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config config/webpack.dev.js",
+    "start": "webpack-dev-server --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
-    "lint": "eslint --ext .jsx --ext .js config src -o ./test/test.html -f html --fix",
+    "lint": "eslint --ext .js config src -o ./test/test.html -f html --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

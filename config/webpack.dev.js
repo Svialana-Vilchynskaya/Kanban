@@ -1,19 +1,13 @@
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 
 const common = require('./webpack.common');
 
-module.exports = merge.smart(common, {
+module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   output: {
     publicPath: '/',
-  },
-
-  resolve: {
-    alias: {
-      'react-dom': '@hot-loader/react-dom',
-    },
   },
 
   watch: true, // or flag in package.json
