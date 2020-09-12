@@ -1,6 +1,5 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,7 +8,146 @@
     <title>Kanban</title>
 </head>
 <body>
-<p><span>Hello world!</span></p>
+<div class="container">
+    <div class="wrapper">
+        <div class="columns">
+            <div class="column">
+                <h2 class="column__name">Планы на месяц</h2>
+                <div class="column__cards-container">
+                    <div class="card__title">
+                        <p>Пройти курс по React</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-pen-square fa-w-14 fa-2x"><g class="fa-group"><path fill="#dfe3e6" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-97.8 210L166.5 377.7l-57.1 6.3a12.11 12.11 0 0 1-13.3-13.3l6.3-57.1 135.7-135.7a6.13 6.13 0 0 1 8.6.1l55.5 55.5a6.1 6.1 0 0 1 0 8.5zm42.8-43l-23.1 23.1a6.1 6.1 0 0 1-8.5 0l-55.5-55.5a6.1 6.1 0 0 1 0-8.5L281 135a23.9 23.9 0 0 1 33.9 0l30.1 30.1a24.08 24.08 0 0 1 0 33.9z" class="#dfe3e6"></path><path fill="#c9d2d9" d="M345 165.1L314.9 135a23.9 23.9 0 0 0-33.9 0l-23.1 23.1a6.1 6.1 0 0 0 0 8.5l55.5 55.5a6.1 6.1 0 0 0 8.5 0L345 199a24.08 24.08 0 0 0 0-33.9zM246.7 178a6.13 6.13 0 0 0-8.6-.1L102.4 313.6l-6.3 57.1a12.11 12.11 0 0 0 13.3 13.3l57.1-6.3L302.2 242a6.1 6.1 0 0 0 0-8.5z" class="#dfe3e6"></path></g></svg>
+                    </div>
+                    <div class="card__title">
+                        <p>Отметить день рождения</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Записаться на курсы английского языка, чтобы уехать жить в Лондон</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Сделать бекенд своего сайта на node.js</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Собрать портфолио</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Написать первую статью в блог</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Записаться в мотошколу. Хотя немного страшновато, конечно. Друзья и родители против, но
+                            очень хочется. Но кого я обманываю, уже 2 года решаюсь на этот шаг 😢 Еще и друзья будут
+                            хрустиком называть. В общем, хотя бы подумать над этим.</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Пройти курс по React</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Отметить день рождения</p>
+                    </div>
+                </div>
+                <form class="column__form column__add-card-form">
+                    <button type="button" class="column__open-form">
+                        <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                            <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M14.1412 6.64122H8.35878V0.858779C8.35878 0.400763 7.95802 0 7.5 0C7.04198 0 6.64122 0.400763 6.64122 0.858779V6.64122H0.858779C0.400763 6.64122 0 7.04198 0 7.5C0 7.95801 0.400763 8.35878 0.858779 8.35878H6.64122V14.1412C6.64122 14.5992 7.04198 15 7.5 15C7.95802 15 8.35878 14.5992 8.35878 14.1412V8.35878H14.1412C14.5992 8.35878 15 7.95801 15 7.5C15 7.04198 14.5992 6.64122 14.1412 6.64122Z"
+                                  fill="#6B808C" />
+                        </svg>
+                        <span class="column__button-title">
+                    Добавить ещё одну карточку
+                </span>
+                    </button>
+                    <div class="column__add column__add_hidden">
+                    <textarea class="column__textarea" placeholder="Введите название карточки" autofocus required></textarea>
+                        <div class="column__buttons">
+                            <button type="submit" class="column__add-card-button">Добавить карточку</button>
+                            <button type="button" class="column__close-form-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
+                                     fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M7.5 6.71875L14.2188 0L15 0.78125L8.28125 7.5L15 14.2188L14.2188 15L7.5 8.28125L0.78125 15L0 14.2188L6.71875 7.5L0 0.78125L0.78125 0L7.5 6.71875Z"
+                                          fill="#6B808C" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="column">
+                <h2 class="column__name">Планы на месяц</h2>
+                <div class="column__cards-container">
+                    <div class="card__title">
+                        <p>Записать на курс по React</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Забронировать тир на субботу</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Накидать тем для статей в блог</p>
+                    </div>
+                    <div class="card__title">
+                        <p>Сделать колонку Итоги</p>
+                    </div>
+                </div>
+                <form class="column__form column__add-card-form">
+                    <button type="button" class="column__open-form">
+                        <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                            <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M14.1412 6.64122H8.35878V0.858779C8.35878 0.400763 7.95802 0 7.5 0C7.04198 0 6.64122 0.400763 6.64122 0.858779V6.64122H0.858779C0.400763 6.64122 0 7.04198 0 7.5C0 7.95801 0.400763 8.35878 0.858779 8.35878H6.64122V14.1412C6.64122 14.5992 7.04198 15 7.5 15C7.95802 15 8.35878 14.5992 8.35878 14.1412V8.35878H14.1412C14.5992 8.35878 15 7.95801 15 7.5C15 7.04198 14.5992 6.64122 14.1412 6.64122Z"
+                                  fill="#6B808C" />
+                        </svg>
+                        <span class="column__button-title">
+                    Добавить ещё одну карточку
+                </span>
+                    </button>
+                    <div class="column__add column__add_hidden">
+                    <textarea class="column__textarea" placeholder="Введите название карточки"
+                              autofocus required></textarea>
+                        <div class="column__buttons">
+                            <button type="submit" class="column__add-card-button">Добавить карточку</button>
+                            <button type="button" class="column__close-form-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
+                                     fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M7.5 6.71875L14.2188 0L15 0.78125L8.28125 7.5L15 14.2188L14.2188 15L7.5 8.28125L0.78125 15L0 14.2188L6.71875 7.5L0 0.78125L0.78125 0L7.5 6.71875Z"
+                                          fill="#6B808C" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column column-form">
+                <form class="column__form column__add-column-form">
+                    <button type="button" class="column__open-form">
+                        <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                            <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M14.1412 6.64122H8.35878V0.858779C8.35878 0.400763 7.95802 0 7.5 0C7.04198 0 6.64122 0.400763 6.64122 0.858779V6.64122H0.858779C0.400763 6.64122 0 7.04198 0 7.5C0 7.95801 0.400763 8.35878 0.858779 8.35878H6.64122V14.1412C6.64122 14.5992 7.04198 15 7.5 15C7.95802 15 8.35878 14.5992 8.35878 14.1412V8.35878H14.1412C14.5992 8.35878 15 7.95801 15 7.5C15 7.04198 14.5992 6.64122 14.1412 6.64122Z"
+                                  fill="#6B808C" />
+                        </svg>
+                        <span class="column__button-title">
+                    Добавить ещё одну колонку
+                </span>
+                    </button>
+                    <div class="column__add column__add_hidden">
+                        <input class="column__input" placeholder="Введите название колонки" autofocus required />
+                        <div class="column__buttons">
+                            <button type="submit" class="column__add-column-button">Добавить колонку</button>
+                            <button type="button" class="column__close-form-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
+                                     fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M7.5 6.71875L14.2188 0L15 0.78125L8.28125 7.5L15 14.2188L14.2188 15L7.5 8.28125L0.78125 15L0 14.2188L6.71875 7.5L0 0.78125L0.78125 0L7.5 6.71875Z"
+                                          fill="#6B808C" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

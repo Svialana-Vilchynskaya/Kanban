@@ -1,11 +1,5 @@
 .idea
-.tmp
 .sass-cache
-.publish
-.vscode
-.DS_Store
 node_modules/
 dist/
-config/index.custom.js
-package-lock.json
 test/

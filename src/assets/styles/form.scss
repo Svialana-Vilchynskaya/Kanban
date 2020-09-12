@@ -1,0 +1,107 @@
+@import "colorsVariable";
+.column__form {
+  padding: 8px 12px 12px 12px;
+  position: relative;
+}
+
+.column__open-form {
+  left: 0;
+  bottom: 0;
+  margin: -8px -12px -12px -12px;
+  width: 272px;
+  outline: 0;
+  border: 0;
+  color: #6B808C;
+  padding: 12px;
+  background: #DFE3E6;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover {
+    background: #85a4b1;
+    color: #ffffff;
+  }
+  &:focus {
+    font-weight: bold;
+  }
+  svg {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 12px;
+  }
+}
+
+.column__button-title {
+  margin-left: -25px;
+}
+
+.column__input {
+  width: 100%;
+  padding: 8px 8px 8px 12px;
+  margin-bottom: 6px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: $box-shadow;
+  outline: 0;
+  border: 0;
+  &::placeholder {
+    color: #b8b9bb;
+  }
+}
+
+.column__add_hidden,
+.column__open-form_hidden {
+  display: none;
+}
+
+.column__textarea {
+  display: block;
+  height: 54px;
+  width: 100%;
+  resize: none;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: $box-shadow;
+  outline: 0;
+  border: 0;
+  &::placeholder {
+    color: #b8b9bb;
+  }
+}
+
+.column__buttons {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column__add-card-button,
+.column__add-column-button {
+  height: 30px;
+  width: 152px;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: $button-color;
+  transition: background-color .2s linear;
+  cursor: pointer;
+  &:focus {
+    background-color: $dark-button-color;
+  }
+}
+
+.column__close-form-button {
+  height: 15px;
+  background-color: $column-background;
+  transition: opacity .1s linear;
+  opacity: .5;
+  cursor: pointer;
+  border: 0;
+  &:focus {
+    opacity: 1;
+  }
+}
